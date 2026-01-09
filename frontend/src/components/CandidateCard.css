@@ -1,0 +1,210 @@
+.candidate-card {
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.candidate-card:hover {
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+}
+
+.candidate-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.candidate-main-info {
+  flex: 1;
+}
+
+.candidate-name-section {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 0.5rem;
+}
+
+.candidate-name-section h3 {
+  font-size: 1.25rem;
+  margin: 0;
+}
+
+.match-score {
+  padding: 0.25rem 0.75rem;
+  border-radius: 1rem;
+  font-size: 0.875rem;
+  font-weight: 600;
+}
+
+.score-high {
+  background: #dcfce7;
+  color: #166534;
+}
+
+.score-medium {
+  background: #fef3c7;
+  color: #92400e;
+}
+
+.score-low {
+  background: #fee2e2;
+  color: #991b1b;
+}
+
+.status-badge {
+  padding: 0.25rem 0.75rem;
+  border-radius: 0.25rem;
+  font-size: 0.75rem;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+
+.status-new {
+  background: #e0e7ff;
+  color: #3730a3;
+}
+
+.status-reviewed {
+  background: #dbeafe;
+  color: #1e40af;
+}
+
+.status-contacted {
+  background: #d1fae5;
+  color: #065f46;
+}
+
+.status-rejected {
+  background: #fee2e2;
+  color: #991b1b;
+}
+
+.candidate-subtitle {
+  color: var(--text-secondary);
+  margin-bottom: 0.25rem;
+}
+
+.candidate-location {
+  color: var(--text-secondary);
+  font-size: 0.875rem;
+}
+
+.expand-icon {
+  color: var(--text-secondary);
+  font-size: 1.25rem;
+  margin-left: 1rem;
+}
+
+.candidate-details {
+  margin-top: 1.5rem;
+  padding-top: 1.5rem;
+  border-top: 1px solid var(--border);
+}
+
+.details-section {
+  margin-bottom: 1.5rem;
+}
+
+.details-section h4 {
+  font-size: 1rem;
+  margin-bottom: 0.75rem;
+  color: var(--text-primary);
+}
+
+.details-section p {
+  color: var(--text-secondary);
+  line-height: 1.6;
+  margin-bottom: 0.5rem;
+}
+
+.details-section a {
+  color: var(--primary-color);
+  text-decoration: none;
+}
+
+.details-section a:hover {
+  text-decoration: underline;
+}
+
+.skills-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.skill-tag {
+  background: var(--background);
+  padding: 0.375rem 0.75rem;
+  border-radius: 0.25rem;
+  font-size: 0.875rem;
+  color: var(--text-primary);
+  border: 1px solid var(--border);
+}
+
+.analysis-summary {
+  background: var(--background);
+  padding: 1rem;
+  border-radius: 0.375rem;
+  border-left: 3px solid var(--primary-color);
+  margin-bottom: 1rem;
+}
+
+.analysis-item {
+  margin-bottom: 1rem;
+}
+
+.analysis-item ul {
+  margin-top: 0.5rem;
+  margin-left: 1.5rem;
+}
+
+.strength-item {
+  color: var(--success);
+  margin-bottom: 0.25rem;
+}
+
+.concern-item {
+  color: var(--warning);
+  margin-bottom: 0.25rem;
+}
+
+.recommendation,
+.next-steps {
+  background: var(--background);
+  padding: 0.75rem;
+  border-radius: 0.375rem;
+  margin-top: 0.5rem;
+}
+
+.experience-item {
+  margin-bottom: 1rem;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid var(--border);
+}
+
+.experience-item:last-child {
+  border-bottom: none;
+  margin-bottom: 0;
+  padding-bottom: 0;
+}
+
+.duration {
+  color: var(--text-secondary);
+  font-size: 0.875rem;
+}
+
+.candidate-actions {
+  display: flex;
+  gap: 1rem;
+  margin-top: 1.5rem;
+  padding-top: 1.5rem;
+  border-top: 1px solid var(--border);
+}
+
+.status-select {
+  padding: 0.5rem 1rem;
+  border: 1px solid var(--border);
+  border-radius: 0.375rem;
+  font-size: 0.875rem;
+  cursor: pointer;
+}
