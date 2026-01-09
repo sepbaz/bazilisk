@@ -57,7 +57,7 @@ Return only valid JSON, no additional text."""
 
     try:
         message = client.messages.create(
-            model="claude-3-5-sonnet-20241022",
+            model="claude-3-5-sonnet-20240620",
             max_tokens=2000,
             messages=[
                 {"role": "user", "content": prompt}
@@ -125,7 +125,7 @@ Be thorough but concise. Return only valid JSON."""
 
     try:
         message = client.messages.create(
-            model="claude-3-5-sonnet-20241022",
+            model="claude-3-5-sonnet-20240620",
             max_tokens=3000,
             messages=[
                 {"role": "user", "content": prompt}
@@ -181,7 +181,7 @@ Return only valid JSON."""
 
     try:
         message = client.messages.create(
-            model="claude-3-5-sonnet-20241022",
+            model="claude-3-5-sonnet-20240620",
             max_tokens=3000,
             messages=[
                 {"role": "user", "content": prompt}
