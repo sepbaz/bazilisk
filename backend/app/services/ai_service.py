@@ -9,7 +9,14 @@ from app.models import Candidate, Job
 
 
 # Initialize Anthropic client
-client = Anthropic(api_key=settings.ANTHROPIC_API_KEY) if settings.ANTHROPIC_API_KEY else None
+# Only initialize if API key exists and is not the placeholder value
+client = None
+if settings.ANTHROPIC_API_KEY and settings.ANTHROPIC_API_KEY != "your_api_key_here":
+    try:
+        client = Anthropic(api_key=settings.ANTHROPIC_API_KEY)
+    except Exception as e:
+        print(f"Failed to initialize Anthropic client: {e}")
+        client = None
 
 
 async def extract_job_requirements(job_description: str) -> Dict[str, Any]:
@@ -23,7 +30,16 @@ async def extract_job_requirements(job_description: str) -> Dict[str, Any]:
         Structured requirements dictionary
     """
     if not client:
-        return {"error": "AI service not configured"}
+        print("WARNING: ANTHROPIC_API_KEY not configured. Returning empty requirements.")
+        return {
+            "required_skills": [],
+            "preferred_skills": [],
+            "min_years_experience": None,
+            "education_requirements": [],
+            "key_responsibilities": [],
+            "must_have_qualifications": [],
+            "warning": "AI analysis disabled - API key not configured"
+        }
 
     prompt = f"""Analyze the following job description and extract structured information.
 Return a JSON object with these fields:
